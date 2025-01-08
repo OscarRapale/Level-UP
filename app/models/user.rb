@@ -10,7 +10,7 @@ class User < ApplicationRecord
 
   # Associations
   has_many :habit_lists, dependent: :destroy
-  has_many :custom_habits, dependent: :destroy
+  has_many :habits, dependent: :destroy
 
   # Default values for attributes
   after_initialize :set_defaults
