@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  list_owner_id: 
-  completed_habits: 1
+  completed: false
+  user: one
 
 two:
   name: MyString
-  list_owner_id: 
-  completed_habits: 1
+  completed: false
+  user: two

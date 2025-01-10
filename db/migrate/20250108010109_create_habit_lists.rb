@@ -11,3 +11,9 @@ class CreateHabitLists < ActiveRecord::Migration[7.0]
     end
   end
 end
+
+class DropHabitLists < ActiveRecord::Migration[7.0]
+  def change
+    drop_table :habit_lists
+  end
+end
