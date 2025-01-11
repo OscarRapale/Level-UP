@@ -36,7 +36,8 @@ class TasksController < ApplicationController
     def complete
       @task = current_user.tasks.find(params[:id])
       if @task.update(completed: true)
-        current_user.gain_xp(10) # Gain 10 XP for completing a task
+        xp_gained = rand(75..110)
+        current_user.gain_xp(xp_gained)
         render json: @task
       else
         render json: { errors: @task.errors.full_messages }, status: :unprocessable_entity
