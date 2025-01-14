@@ -17,4 +17,6 @@ Rails.application.routes.draw do
       patch :complete
     end
   end
+
+  get "tasks", to: "tasks#index", as: :task_index
 end
