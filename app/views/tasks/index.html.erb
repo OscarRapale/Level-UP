@@ -41,6 +41,16 @@
       </ul>
     </div>
 
+    <% if user_signed_in? %>
+    <div class="container mt-3">
+          <div class="alert alert-info">
+            <strong>Status:</strong>
+            <p>Level: <%= current_user.level %></p>
+            <p>XP: <%= current_user.current_xp %> / <%= current_user.xp_to_next_level %></p>
+          </div>
+    </div>
+    <% end %>
+
     <script>
           document.addEventListener("DOMContentLoaded", function() {
 
@@ -90,7 +100,6 @@
                 });
               }
             });
-
             
             document.getElementById("task_list").addEventListener("click", function(event) {
               if (event.target.classList.contains("delete-task")) {

@@ -8,3 +8,138 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ body {
+    background-color: black;
+ }
+
+ h1 {
+    color: white;
+    text-align: center;
+ }
+
+ .task-list .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+
+  .input-group .form-control {
+    background-color: black;
+    border: 2px solid aquamarine;
+    color: white;
+  }
+
+  .input-group .form-control:focus {
+    background-color: black;
+    border-color: aquamarine;
+  }
+
+  .list-group-item {
+    background-color: black;
+    color: white;
+    border: 2px solid aquamarine;
+  }
+
+  .btn-primary {
+    background-color: black;
+    border: 2px solid aquamarine;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: aquamarine;
+    border-color: aquamarine;
+    color: black;
+  }
+
+  .btn-success {
+    background-color: black;
+    border: 2px solid rgb(96, 235, 96);
+    color: white;
+  }
+
+  .btn-success:hover {
+    background-color: rgb(96, 235, 96);
+    color: black;
+  }
+
+  .btn-danger {
+    background-color: black;
+    border: 2px solid red;
+    color: white;
+  }
+
+  .btn-danger:hover {
+    background-color: rgb(244, 63, 63);
+    color: black;
+  }
+  
+  ::placeholder {
+    color: grey !important;
+  }
+
+  .container {
+    width: 45%;
+  }
+
+  .alert-info {
+    background-color: black;
+    border: 2px solid aquamarine;
+    text-align: center;
+    color: white;
+    width: 45%;
+    font-size: x-large;
+    margin: 0 auto;
+    margin-top: 5rem;
+  }
+
+  /* NavBar styles */
+
+  .navbar {
+    background-color: black !important;
+  }
+
+  .navbar-brand {
+    color: white;
+  }
+
+  .navbar-toggler {
+    color: white;
+  }
+
+  .navbar-toggler-icon {
+    color: white;
+  }
+
+  .nav-item a {
+    color: white;
+  }
+
+  .nav-item a:hover {
+    color: aquamarine;
+  }
+
+  .nav-item button {
+    color: white;
+  }
+
+  .nav-item button:hover {
+    color: aquamarine;
+  }
+
+  #navbarNav {
+    color: white;
+  }
+
+  .notice {
+    background-color: rgb(44, 144, 94);
+    width: 15%;
+    color: black;
+
+  }
+
+  
