@@ -91,3 +91,7 @@ production:
 cable:
   <<: *default
   database: level_up_cable
+
+queue:
+  <<: *default
+  database: level_up_queue
