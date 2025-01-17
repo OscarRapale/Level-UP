@@ -95,3 +95,7 @@ cable:
 queue:
   <<: *default
   database: level_up_queue
+
+cache:
+  <<: *default
+  database: level_up_cache
