@@ -18,7 +18,7 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  prepared_statements: true
+
 
 development:
   <<: *default
@@ -79,11 +79,20 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  url: <%= ENV["DATABASE_URL"] %>
-  # Alternatively, you can define individual components if not using DATABASE_URL
-  # database: level_up_production
-  # username: <%= ENV["DATABASE_USER"] %>
-  # password: <%= ENV["DATABASE_PASSWORD"] %>
-  # host: <%= ENV["DATABASE_HOST"] %>
-  # port: <%= ENV["DATABASE_PORT"] || 5432 %>
+  primary: &primary_production
+    <<: *default
+    database: level_up_production
+    username: level_up
+    password: <%= ENV["LEVEL_UP_DATABASE_PASSWORD"] %>
+  cache:
+    <<: *primary_production
+    database: level_up_production_cache
+    migrations_paths: db/cache_migrate
+  queue:
+    <<: *primary_production
+    database: level_up_production_queue
+    migrations_paths: db/queue_migrate
+  cable:
+    <<: *primary_production
+    database: level_up_production_cable
+    migrations_paths: db/cable_migrate
