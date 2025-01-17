@@ -1,1 +1,20 @@
-<h1>Welcome User</h1>
+<!-- filepath: /home/oscar/Level-UP/app/views/home/index.html.erb -->
+<div class="container mt-5">
+  <div class="row justify-content-start">
+    <div class="col-md-6 move-left">
+      <div class="landing">
+        <h1 class="landing-header">Welcome to, </h1>
+        <h2 class="title-header">Level-UP!</h2>
+        <p class="description">Your daily To-Do list with a twist! <br>
+          Level-UP helps you increase your productivity by turning your daily tasks into a game, <br>
+          where you gain experience points (XP) as you complete your habits.
+        </p>
+
+        <%= link_to "Get Started", new_user_registration_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <%= image_tag "Level.png", alt: "Level-up logo", class: "img-fluid" %>
+    </div>
+  </div>
+</div>

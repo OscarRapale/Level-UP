@@ -9,6 +9,8 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
+ /* Task List styles */
+
  body {
     background-color: black;
  }
@@ -86,15 +88,16 @@
     width: 45%;
   }
 
-  .alert-info {
+  .user-status-alert {
     background-color: black;
     border: 2px solid aquamarine;
     text-align: center;
     color: white;
-    width: 45%;
+    width: 70%;
     font-size: x-large;
     margin: 0 auto;
-    margin-top: 5rem;
+    margin-top: 2rem;
+    margin-right: 20px;
   }
 
   /* NavBar styles */
@@ -104,7 +107,7 @@
   }
 
   .navbar-brand {
-    color: white;
+    width: 100px;
   }
 
   .navbar-toggler {
@@ -136,10 +139,71 @@
   }
 
   .notice {
-    background-color: rgb(44, 144, 94);
-    width: 15%;
-    color: black;
-
+    color: rgb(52, 236, 144);
   }
 
-  
+  .general-alert {
+    color: red;
+  }
+
+  /* Forms Styles */
+
+  .text-center {
+    color: white !important;
+  }
+
+  .field label {
+    color: grey;
+  }
+
+  .field .form-control {
+    background-color: black;
+    border: 2px solid aquamarine;
+    color: white;
+  }
+
+  a {
+    color: white;
+  }
+
+  a:hover {
+    color: aquamarine;
+    text-decoration: underline;
+  }
+
+  .text-center, i, em {
+    color: grey;
+  }
+
+  /* Landing Page Styles */
+
+  .landing-header {
+    margin-right: 11rem;
+  }
+
+  .title-header {
+    color: aquamarine;
+    margin-left: 10px;
+  }
+
+  .description {
+    color: white;
+    margin-left: 10px;
+  }
+
+  .landing {
+    border: 2px solid aquamarine;
+    width: 150%;
+    padding: 2rem;
+    margin-right: 10rem;
+  }
+
+  .img-fluid {
+    margin-left: 8rem;
+    margin-top: 5rem;
+    width: 100%;
+  }
+
+  .move-left {
+    margin-left: -140px;
+  }
