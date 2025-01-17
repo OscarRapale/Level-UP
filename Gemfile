@@ -65,3 +65,7 @@ end
 gem "devise", "~> 4.9"
 
 gem "webpacker", "~> 5.4"
+
+group :production do
+  gem 'rails_12factor'
+end
