@@ -37,11 +37,6 @@ class TasksController < ApplicationController
       if @task.update(completed: true)
         xp_gained = rand(75..110)
         current_user.gain_xp(xp_gained)
-        UserStatusChannel.broadcast_to(current_user, {
-          level: current_user.level,
-          current_xp: current_user.current_xp,
-          xp_to_next_level: current_user.xp_to_next_level
-        })
         render json: @task
       else
         render json: { errors: @task.errors.full_messages }, status: :unprocessable_entity
